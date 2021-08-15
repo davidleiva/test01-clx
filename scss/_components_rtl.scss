@@ -1,0 +1,265 @@
+// BUTTON
+
+.button {
+    display: inline-block;
+    color: white;
+    background: rgb(231,121,42);
+    padding: 4px 8px 16px 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    letter-spacing: -0.03125rem;
+    direction: rtl;
+
+    &--has-caret:after {
+        content: '>';
+        font-size: 0.75rem;
+        margin-right: 0.5rem;
+        position: relative;
+        top: 0.125rem;
+    }
+
+    &.button--transparent {
+        @extend .transparent;
+    }
+}
+
+.button:not(.button--transparent) {
+    background: linear-gradient(180deg, rgba(231,121,42,1) 50%, rgba(211,107,37,1) 51%);
+}
+
+.button-icon-special {
+    display: flex;
+    width: 100%;
+}
+
+.button-navigation-item {
+    background-color: var(--color-cyan);
+    display: inline-block;
+    text-align: center;
+    padding: 0.5rem 0;
+
+    &.active {
+        background-color: var(--color-blue);
+    }
+
+    &__image {
+        margin: 0 auto;
+        height: 56px;
+    }
+
+    span {
+        color: white;
+    }
+}
+
+// BANK HEADER
+
+.bank-header {
+    padding: 1rem;
+    &__img {
+        height: 3rem;
+    }
+}
+
+// SEARCH BAR
+
+.searchbar {
+    width: 100%;
+    @extend .d-flex;
+    padding: 0.5rem 1rem;
+    direction: ltr;
+
+    input::placeholder {
+        color: rgba(var(--color-body), 0.5);
+    }
+}
+
+// BANNER
+
+.banner {
+    background-color: var(--color-grey);
+    padding: 1.065rem 1rem;
+}
+
+.banner--dark {
+    @extend .banner;
+    background-color: var(--color-cyan);
+    color: white;
+    @include margin-bottom(1);
+}
+
+.banner__content-white {
+    background-color: white;
+    padding: 24px 16px;
+}
+
+.banner {
+    &__header {
+        &--big-margin {
+            @include margin-bottom(2);
+        }
+
+        &--marengo {
+            color: var(--color-marengo);
+        }
+
+        &:after {
+            content: '_';
+            color: white;
+            background-color: var(--color-blue);
+            padding: 0 0.25rem 0.25rem;
+            font-size: 0.75rem;
+            position: relative;
+            top: -0.25rem;
+        }
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__customize-my-status {
+        width: 58%;
+        flex: 0 0 auto;
+    }
+
+    .button-icon-special {
+        display: flex;
+        @include link-reset;
+        padding: 0;
+
+        &__icon {
+            margin-right: 0.25rem;
+            height: 1.75rem;
+        }
+
+        &__text {
+            font-size: 1rem;
+            font-weight: 600;
+            position: relative;
+            top: 2px;
+            @include margin-bottom(0.25);
+            text-align: left;
+        }
+
+        &__sub-text {
+            display: block;
+            font-weight: 100;
+            font-size: 0.875rem;
+        }
+    }
+
+    &__info {
+        @include margin-bottom(1);
+    }
+}
+
+.banner .button-icon-special.watch-demo {
+    color: var(--color-orange);
+    justify-content: flex-end;
+}
+
+.logo-banner--dark {
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-banner-logo-dark);
+}
+
+.watch-demo {
+    width: 50%;
+
+    .button-icon-special__text {
+        text-align: center;
+        margin-right: 0.5rem;
+    }
+
+    .button-icon-special__icon {
+        height: 1.25rem;
+    }
+}
+
+// LIST
+
+.list {
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        display: inline-block;
+    }
+
+    &:not(.super-menu) .list__item {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        position: relative;
+
+        &:last-of-type {
+            padding-left: 0;
+        }
+    }
+
+    .list__item a {
+        @include link-reset;
+    }
+
+    .list__item a.button {
+        color: white
+    }
+
+    &--blue {
+        color: var(--color-blue);
+    }
+
+    &--has-separator {
+        .list__item:after{
+            content: "|";
+            position: absolute;
+            left: -4px;
+        }
+
+        .list__item:last-of-type:after {
+            content: none;
+        }
+    }
+}
+
+.conditions-list {
+    @include margin-bottom(1.5);
+    @extend .text-left;
+}
+
+.super-menu {
+    @include margin-bottom(1.5);
+}
+
+.super-menu .list__item  {
+    padding: 0 0.25rem;
+
+    > a {
+        width: 100%;
+    }
+}
+
+// BREADCRUMB
+.breadcrumb {
+    @extend .d-inline-block;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        @extend .d-inline-block;
+    }
+
+    &__item,
+    &__item--current {
+        @include link-reset;
+    }
+
+    &__item--current {
+        color: var(--color-orange);
+    }
+}
+
+.copyright {
+    @extend .text-left;
+}

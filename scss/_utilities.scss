@@ -1,0 +1,48 @@
+.block-centered {
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.transparent {
+    border: none;
+    background-color: transparent;
+}
+
+.color-white {
+    color: white;
+}
+
+.min-h-100 {
+    min-height: 100%;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.bg-grey {
+    background-color: var(--color-grey);
+}

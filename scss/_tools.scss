@@ -1,0 +1,8 @@
+@mixin link-reset {
+    text-decoration: none;
+    color: inherit;
+}
+
+@mixin margin-bottom($value) {
+    margin-bottom: #{$value}rem;
+}

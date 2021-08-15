@@ -1,0 +1,11 @@
+.rtl {
+    direction: rtl;
+}
+
+@import './settings';
+@import './tools';
+@import './elements_rtl';
+@import './layout_rtl';
+@import './components_rtl';
+@import './utilities';
+@import './ie-fixes';

@@ -1,0 +1,90 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1430px;
+    box-sizing: border-box;
+
+    &--main-container {
+        @extend .container;
+        background-color: var(--color-container-main-bck);
+        padding: 28px;
+    }
+}
+
+.header {
+    width: 100%;
+    @include margin-bottom(0.5);
+}
+
+.footer {
+    padding: 24px;
+}
+
+.content {
+    &__bank-header {
+        @include margin-bottom(0.5);
+        @extend .text-right;
+    }
+
+    &__breadcrumb {
+        padding-left: 2.5rem;
+        @include margin-bottom(1.5);
+    }
+
+    &__sub-header {
+        @include margin-bottom(1);
+    }
+
+    &__sub-header-content,
+    &__slogan-img-container {
+        padding: 0.25rem;
+    }
+
+    &__sub-header-content:first-of-type {
+        padding-left: 0;
+    }
+
+    &__sub-header-content:last-of-type {
+        padding-right: 0;
+    }
+
+    &__slogan-image {
+        display: block;
+        margin: 0 auto;
+        height: 3rem;
+    }
+
+    &__search-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.main-nav > .list {
+    text-align: center;
+
+    @include mq($from: desktop) {
+        text-align: right;
+    }
+
+    .list__item {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        @include mq($from: tablet) {
+            width: auto;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.list .list__item {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    @include mq($from: tablet) {
+        width: auto;
+        margin-bottom: 0;
+    }
+}

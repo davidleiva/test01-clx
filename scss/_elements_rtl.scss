@@ -1,0 +1,66 @@
+@import './normalize';
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 0.5rem 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-body)--bck;
+    font-family: var(--font-body);
+    font-size: var(--font-size);
+    color: var(--color-body);
+}
+
+body, input {
+    letter-spacing: var(--letter-spacing);
+}
+
+input {
+    border: none;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq($from: desktop) {
+        flex-wrap: nowrap;
+    }
+}
+
+.col {
+    flex: 0 0 auto;
+
+    @include mq($from: desktop) {
+        flex: 1 0 0%;
+    }
+}
+
+.col-8 {
+    @include mq($from: desktop) {
+        flex: 0 0 auto;
+        width: 70%;
+    }
+}
+
+.row--page > .col {
+    @include mq($from: desktop) {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    &:first-of-type {
+        padding-right: 0;
+    }
+
+    &:last-of-type {
+        padding-left: 0;
+    }
+}

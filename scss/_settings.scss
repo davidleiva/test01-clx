@@ -1,0 +1,50 @@
+// Breakpoints
+
+$bkp-mobile: 320px;
+$bkp-phablet: 576px;
+$bkp-tablet: 768px;
+$bkp-desktop: 980px;
+$bkp-wide: 1280px;
+$bkp-hd: 1920px;
+
+$breakpoints: (
+  mobile: $bkp-mobile,
+  phablet: $bkp-phablet,
+  tablet: $bkp-tablet,
+  desktop: $bkp-desktop,
+  wide: $bkp-wide,
+  hd: $bkp-hd
+);
+
+/**
+ * Breakpoints needed for sass-mq mixin
+ */
+
+$mq-breakpoints: $breakpoints !default;
+
+// Define the breakpoint from the $mq-breakpoints list that should
+// be used as the target width when outputting a static stylesheet
+// (when $mq-responsive is set to 'false').
+$mq-static-breakpoint: desktop;
+
+@import './mq';
+
+///////////////////////////////////////////
+
+// Vars
+
+:root {
+  --color-body: #76645d;
+  --color-grey: #f2f2f2;
+  --color-blue: #273a98;
+  --color-cyan: #199fd9;
+  --color-body--bck: var(--color-grey);
+  --color-container-main-bck: white;
+  --color-banner-logo-dark: var(--color-blue);
+  --color-orange: #e7792a;
+  --color-brown: #d46a21;
+  --color-marengo: #004d6d;
+  --font-body: Verdana, Helvetica, sans-serif;
+  --font-size: 16px;
+  --letter-spacing: -0.5px;
+}
